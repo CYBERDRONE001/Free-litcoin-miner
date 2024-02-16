@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw LTC</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR26zdX1mwvHZ1iXTySbX8dv3Mz4ee_nknemg&usqp=CAU');
+            background-size: center;
+            background-repeat: repeat;
+            background-attachment: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #46ff15;
+            margin-top: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #46ff15;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px;
+            color: #46ff15;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #withdrawMessage {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #transactionHistory {
+            border: 1px solid ##46ff15;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+            overflow-y: auto;
+            max-height: 200px;
+        }
+
+        #transactionHistory p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Withdraw LTC</h1>
+    <p>Your available balance: <span id="balance">0.00000000 LTC</span></p>
+    <p>Input Your LTC Coin wallet address:</p>
+    <input type="text" id="wallet address" placeholder="Your LTC address">
+    <p>Enter the amount you want to withdraw:</p>
+    <input type="number" id="withdrawAmount" step="0.00000001" placeholder="0.00000000">
+    <button onclick="withdraw()">Withdraw</button>
+    <p id="withdrawMessage"></p>
+
+    <div id="transactionHistory">
+        <h2>Transaction History</h2>
+        <p>No transactions yet.</p>
+    </div>
+
+    <script src="freeltccoinwithdraw.js"></script>
+    <script src="freeltccoin.js"></script>
+</body>
+</html>
